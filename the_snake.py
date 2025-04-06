@@ -1,4 +1,5 @@
 from random import choice, randint
+
 import pygame
 
 # Константы для размеров поля и сетки:
@@ -172,8 +173,7 @@ def main():
 
     while True:
         clock.tick(SPEED)
-
-    # Тут опишите основную логику игры.
+        # Тут опишите основную логику игры.
         # Обработка событий.
         handle_keys(snake)
         snake.update_direction()
@@ -183,10 +183,6 @@ def main():
         if snake.get_head_position() == apple.position:
             snake.length += 1
             apple.randomize_position()
-
-        # Проверка на столкновение.
-        # if snake.get_head_position in snake.positions[1:]:
-        #     snake.reset()
 
         # Отрисовка
         screen.fill(BOARD_BACKGROUND_COLOR)
